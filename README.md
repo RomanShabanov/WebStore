@@ -1,0 +1,2 @@
+# WebStore
+POS WebStore module
