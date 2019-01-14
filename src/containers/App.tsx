@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+
+import { Header, Footer } from '../components';
 
 import Home from './Home';
 import Contacts from './Contacts';
@@ -11,7 +12,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <Home />
+        <Footer />
       </div>
     );
   }
