@@ -4,7 +4,7 @@ import './Sidemenu.scss';
 
 class Sidemenu extends Component {
     render() {
-        return
+        return <div className="Sidemenu">Sidemenu</div>
     }
 }
 

@@ -4,7 +4,7 @@ import './Slider.scss';
 
 class Slider extends Component {
     render() {
-        return
+        return <div className="Slider">Slider</div>
     }
 }
 

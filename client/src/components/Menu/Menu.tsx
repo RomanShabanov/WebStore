@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
-import { Button, Header } from '../../components';
-
 class Menu extends Component {
     render() {
-        return
+        return <div className="Menu">Menu</div>
     }
 }
 

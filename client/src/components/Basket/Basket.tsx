@@ -5,7 +5,7 @@ import './Basket.scss';
 
 class Basket extends Component {
     render() {
-        return
+        return <div className="Basket">Basket</div>
     }
 }
 

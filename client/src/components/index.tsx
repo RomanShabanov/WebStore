@@ -6,7 +6,7 @@ import ProductPreview from './ProductPreview';
 import Footer from './Footer';
 import Info from './Info';
 import Sidemenu from './Sidemenu';
-import Calender from './Calender';
+import Calendar from './Calendar';
 
 export {
     Button,
@@ -17,6 +17,6 @@ export {
     Footer,
     Info,
     Sidemenu,
-    Calender,
+    Calendar,
 
 }

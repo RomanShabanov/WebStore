@@ -4,7 +4,7 @@ import './ProductPreview.scss';
 
 class ProductPreview extends Component {
     render() {
-        return
+        return <div className="ProductPreview">Product Preview</div>
     }
 }
 

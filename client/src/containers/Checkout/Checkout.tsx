@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
-import { Button, Header } from '../../components';
-
 class Checkout extends Component {
     render() {
-        return
+        return <div className="Checkout">Checkout</div>;
     }
 }
 
