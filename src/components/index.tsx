@@ -7,6 +7,8 @@ import Footer from './Footer';
 import Info from './Info';
 import Sidemenu from './Sidemenu';
 import Calendar from './Calendar';
+import LanguageSwitch from './LanguageSwitch';
+import ToTop from './ToTop';
 
 export {
     Button,
@@ -18,5 +20,6 @@ export {
     Info,
     Sidemenu,
     Calendar,
-
+    LanguageSwitch,
+    ToTop,
 }
