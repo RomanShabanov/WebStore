@@ -5,7 +5,7 @@ import './ToTop.scss';
 class ToTop extends Component {
 
     render() {
-        return null;
+        return <div className="ToTop">ToTop</div>;
     }
 
 }
