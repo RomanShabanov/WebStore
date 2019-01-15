@@ -1,0 +1,5 @@
+@import "../mixins";
+
+p {
+    @include font-size(14px, 18px);
+}
