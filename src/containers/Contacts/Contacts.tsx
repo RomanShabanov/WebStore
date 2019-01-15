@@ -4,7 +4,7 @@ import { Button, Header } from '../../components';
 
 class Contacts extends Component {
     render() {
-        return <div><Header /> Contacts <Button /></div>
+        return <div>Contacts</div>
     }
 }
 
