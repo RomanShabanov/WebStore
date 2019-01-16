@@ -25,6 +25,46 @@ const AsynCheckout = Loadable({
   loading: () => <div>Loading...</div>
 });
 
+const AsynForgot = Loadable({
+  loader: () => import(/*webpackCunkName: "Forgot" */ './Forgot'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynInstagramWall = Loadable({
+  loader: () => import(/*webpackCunkName: "InstagramWall" */ './InstagramWall'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynLogin = Loadable({
+  loader: () => import(/*webpackCunkName: "Login" */ './Login'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynOffers = Loadable({
+  loader: () => import(/*webpackCunkName: "Offers" */ './Offers'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynOrder = Loadable({
+  loader: () => import(/*webpackCunkName: "Order" */ './Order'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynOrdersHistory = Loadable({
+  loader: () => import(/*webpackCunkName: "OrdersHistory" */ './OrdersHistory'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynProfile = Loadable({
+  loader: () => import(/*webpackCunkName: "Profile" */ './Profile'),
+  loading: () => <div>Loading...</div>
+});
+
+const AsynSignUp = Loadable({
+  loader: () => import(/*webpackCunkName: "SignUp" */ './SignUp'),
+  loading: () => <div>Loading...</div>
+});
+
 class App extends Component {
   render() {
     return (
@@ -36,6 +76,14 @@ class App extends Component {
             <Route path='/booking' exact component={AsynBooking} />
             <Route path='/contacts' exact component={AsynContacts} />
             <Route path='/checkout' component={AsynCheckout} />
+            <Route path='/forgot' component={AsynForgot} />
+            <Route path='/instagramwall' component={AsynInstagramWall} />
+            <Route path='/login' component={AsynLogin} />
+            <Route path='/offers' component={AsynOffers} />
+            <Route path='/order' component={AsynOrder} />
+            <Route path='/ordershistory' component={AsynOrdersHistory} />
+            <Route path='/profile' component={AsynProfile} />
+            <Route path='/signup' component={AsynSignUp} />
           </Switch>
           <Footer />
         </div>
