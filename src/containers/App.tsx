@@ -5,6 +5,8 @@ import Loadable from 'react-loadable';
 
 import { Header, Footer } from '../components';
 
+import Store from '../stores';
+
 const AsynHome = Loadable({
   loader: () => import(/* webpackChunkName: "Home" */ './Home'),
   loading: () => <div>Loading...</div>
