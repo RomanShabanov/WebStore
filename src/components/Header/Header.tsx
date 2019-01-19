@@ -6,14 +6,20 @@ import './Header.scss';
 class Header extends Component {
     private URLS = [
         {
-            label: "Menu",
+            label: "Home",
             url: "/",
+        }, {
+            label: "Menu",
+            url: "/menu",
         }, {
             label: "#Vegan",
             url: "/vegan",
         }, {
             label: "About",
             url: "/about",
+        }, {
+            label: "Blog",
+            url: "/blog",
         }, {
             label: "Contacts",
             url: "/contacts",

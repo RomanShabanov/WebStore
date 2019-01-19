@@ -17,20 +17,27 @@ class Home extends Component {
                 </div>
             </div>
 
-            <div className="wrapper">
-                <aside></aside>
-                <section>
-                    {ProductsJSON.map(category => {
-                        return (<div className="Menu__Category">
-                            <h2 className="title">{category.title}</h2>
-                            <div className="products">
-                                {category.products.map(product => {
-                                    return <ProductPreview key={product.id} product={product} />
-                                })}
-                            </div>
-                        </div>)
-                    })}
-                </section>
+            <div className="Home__Sale">
+                <div className="wrapper">
+                    <section>
+                        {ProductsJSON.map(category => {
+                            return (<div className="Menu__Category">
+                                <h2 className="title">{category.title}</h2>
+                                <div className="products">
+                                    {category.products.map(product => {
+                                        return <ProductPreview key={product.id} product={product} />
+                                    })}
+                                </div>
+                            </div>)
+                        })}
+                    </section>
+                </div>
+            </div>
+
+            <div className="Home__RecentBlog">
+                <div className="wrapper">
+                    <h2>Blog</h2>
+                </div>
             </div>
         </div>
     }
