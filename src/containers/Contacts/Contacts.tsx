@@ -4,7 +4,11 @@ import { Button, Header } from '../../components';
 
 class Contacts extends Component {
     render() {
-        return <div>Contacts</div>
+        return <div className="Contacts">
+            <div className="wrapper">
+                Contacts
+            </div>
+        </div>
     }
 }
 

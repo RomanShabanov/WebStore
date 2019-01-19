@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { LazyImage } from '../../components';
 
-import explodedBurger from '../../assets/images/exploded-burger.jpg';
+import imageSushiRow from '../../assets/images/sushi_row.jpg';
 
 import './About.scss';
 
@@ -19,7 +19,7 @@ class About extends Component {
 
                 <p>Labore duis aliquip laborum amet occaecat aute nisi consequat. Tempor fugiat id cupidatat velit laboris cupidatat quis ut eu irure. Consectetur nulla labore dolor irure voluptate ullamco minim.</p>
 
-                <LazyImage src={explodedBurger} />
+                <LazyImage src={imageSushiRow} />
             </div>
         </div>
     }
