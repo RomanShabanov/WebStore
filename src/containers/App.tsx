@@ -7,62 +7,62 @@ import { Header, Footer } from '../components';
 
 import Store from '../stores';
 
-const AsynHome = Loadable({
+const AsyncHome = Loadable({
   loader: () => import(/* webpackChunkName: "Home" */ './Home'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynContacts = Loadable({
+const AsyncContacts = Loadable({
   loader: () => import(/* webpackChunkName: "Contacts" */ './Contacts'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynBooking = Loadable({
+const AsyncBooking = Loadable({
   loader: () => import(/* webpackChunkName: "Booking" */ './Booking'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynCheckout = Loadable({
+const AsyncCheckout = Loadable({
   loader: () => import(/* webpackChunkName: "Checkout" */ './Checkout'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynForgot = Loadable({
+const AsyncForgot = Loadable({
   loader: () => import(/*webpackCunkName: "Forgot" */ './Forgot'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynInstagramWall = Loadable({
+const AsyncInstagramWall = Loadable({
   loader: () => import(/*webpackCunkName: "InstagramWall" */ './InstagramWall'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynLogin = Loadable({
+const AsyncLogin = Loadable({
   loader: () => import(/*webpackCunkName: "Login" */ './Login'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynOffers = Loadable({
+const AsyncOffers = Loadable({
   loader: () => import(/*webpackCunkName: "Offers" */ './Offers'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynOrder = Loadable({
+const AsyncOrder = Loadable({
   loader: () => import(/*webpackCunkName: "Order" */ './Order'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynOrdersHistory = Loadable({
+const AsyncOrdersHistory = Loadable({
   loader: () => import(/*webpackCunkName: "OrdersHistory" */ './OrdersHistory'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynProfile = Loadable({
+const AsyncProfile = Loadable({
   loader: () => import(/*webpackCunkName: "Profile" */ './Profile'),
   loading: () => <div>Loading...</div>
 });
 
-const AsynSignUp = Loadable({
+const AsyncSignUp = Loadable({
   loader: () => import(/*webpackCunkName: "SignUp" */ './SignUp'),
   loading: () => <div>Loading...</div>
 });
@@ -74,18 +74,18 @@ class App extends Component {
         <div className="App">
           <Header />
           <Switch>
-            <Route path='/' exact component={AsynHome} />
-            <Route path='/booking' exact component={AsynBooking} />
-            <Route path='/contacts' exact component={AsynContacts} />
-            <Route path='/checkout' component={AsynCheckout} />
-            <Route path='/forgot' component={AsynForgot} />
-            <Route path='/instagramwall' component={AsynInstagramWall} />
-            <Route path='/login' component={AsynLogin} />
-            <Route path='/offers' component={AsynOffers} />
-            <Route path='/order' component={AsynOrder} />
-            <Route path='/ordershistory' component={AsynOrdersHistory} />
-            <Route path='/profile' component={AsynProfile} />
-            <Route path='/signup' component={AsynSignUp} />
+            <Route path='/' exact component={AsyncHome} />
+            <Route path='/booking' exact component={AsyncBooking} />
+            <Route path='/contacts' exact component={AsyncContacts} />
+            <Route path='/checkout' component={AsyncCheckout} />
+            <Route path='/forgot' component={AsyncForgot} />
+            <Route path='/instagramwall' component={AsyncInstagramWall} />
+            <Route path='/login' component={AsyncLogin} />
+            <Route path='/offers' component={AsyncOffers} />
+            <Route path='/order' component={AsyncOrder} />
+            <Route path='/ordershistory' component={AsyncOrdersHistory} />
+            <Route path='/profile' component={AsyncProfile} />
+            <Route path='/signup' component={AsyncSignUp} />
           </Switch>
           <Footer />
         </div>

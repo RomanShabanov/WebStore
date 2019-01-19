@@ -2,9 +2,18 @@ import React, { Component } from 'react';
 
 import './ProductPreview.scss';
 
-class ProductPreview extends Component {
+import { IProduct } from '../../interfaces';
+
+class ProductPreview extends Component<any, any> {
+    constructor(props: IProduct) {
+        super(props);
+    }
+
     render() {
-        return <div className="ProductPreview">Product Preview</div>
+        const { product } = this.props;
+        return <div className="ProductPreview">
+            <div className="cover" style={{backgroundImage: `url(${product.cover})`}}></div>
+        </div >
     }
 }
 
