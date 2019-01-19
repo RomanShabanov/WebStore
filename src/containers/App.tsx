@@ -72,6 +72,11 @@ const AsyncAbout = Loadable({
   loading: () => <div>Loading...</div>
 });
 
+const AsyncVegan = Loadable({
+  loader: () => import(/*webpackCunkName: "Vegan" */ './Vegan'),
+  loading: () => <div>Loading...</div>
+});
+
 class App extends Component {
   render() {
     return (
@@ -93,6 +98,7 @@ class App extends Component {
               <Route path='/profile' component={AsyncProfile} />
               <Route path='/signup' component={AsyncSignUp} />
               <Route path='/about' component={AsyncAbout} />
+              <Route path='/vegan' component={AsyncVegan} />
             </Switch>
           </div>
           <Footer />
