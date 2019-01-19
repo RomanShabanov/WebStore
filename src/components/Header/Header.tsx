@@ -25,9 +25,7 @@ class Header extends Component {
             <div className="wrapper">
                 <div className="menu">
                     <div className="menu__links">
-                        <ul className="menu__links__list">
-                            {this.URLS.map(link => <Link key={link.label} to={link.url}>{link.label}</Link>)}
-                        </ul>
+                        {this.URLS.map(link => <Link className="link" key={link.label} to={link.url}>{link.label}</Link>)}
                     </div>
                 </div>
             </div>
