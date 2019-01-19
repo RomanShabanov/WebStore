@@ -67,26 +67,34 @@ const AsyncSignUp = Loadable({
   loading: () => <div>Loading...</div>
 });
 
+const AsyncAbout = Loadable({
+  loader: () => import(/*webpackCunkName: "About" */ './About'),
+  loading: () => <div>Loading...</div>
+});
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className="App">
           <Header />
-          <Switch>
-            <Route path='/' exact component={AsyncHome} />
-            <Route path='/booking' exact component={AsyncBooking} />
-            <Route path='/contacts' exact component={AsyncContacts} />
-            <Route path='/checkout' component={AsyncCheckout} />
-            <Route path='/forgot' component={AsyncForgot} />
-            <Route path='/instagramwall' component={AsyncInstagramWall} />
-            <Route path='/login' component={AsyncLogin} />
-            <Route path='/offers' component={AsyncOffers} />
-            <Route path='/order' component={AsyncOrder} />
-            <Route path='/ordershistory' component={AsyncOrdersHistory} />
-            <Route path='/profile' component={AsyncProfile} />
-            <Route path='/signup' component={AsyncSignUp} />
-          </Switch>
+          <div className="Content">
+            <Switch>
+              <Route path='/' exact component={AsyncHome} />
+              <Route path='/booking' exact component={AsyncBooking} />
+              <Route path='/contacts' exact component={AsyncContacts} />
+              <Route path='/checkout' component={AsyncCheckout} />
+              <Route path='/forgot' component={AsyncForgot} />
+              <Route path='/instagramwall' component={AsyncInstagramWall} />
+              <Route path='/login' component={AsyncLogin} />
+              <Route path='/offers' component={AsyncOffers} />
+              <Route path='/order' component={AsyncOrder} />
+              <Route path='/ordershistory' component={AsyncOrdersHistory} />
+              <Route path='/profile' component={AsyncProfile} />
+              <Route path='/signup' component={AsyncSignUp} />
+              <Route path='/about' component={AsyncAbout} />
+            </Switch>
+          </div>
           <Footer />
         </div>
       </BrowserRouter>

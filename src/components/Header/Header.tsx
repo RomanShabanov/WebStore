@@ -9,8 +9,11 @@ class Header extends Component {
             label: "Menu",
             url: "/",
         }, {
-            label: "Table Booking",
-            url: "/booking",
+            label: "#Vegan",
+            url: "/vegan",
+        }, {
+            label: "About",
+            url: "/about",
         }, {
             label: "Contacts",
             url: "/contacts",
@@ -19,11 +22,13 @@ class Header extends Component {
 
     render() {
         return <header className="Header">
-            <div className="menu">
-                <div className="menu__links">
-                    <ul className="menu__links__list">
-                        {this.URLS.map(link => <Link to={link.url}>{link.label}</Link>)}
-                    </ul>
+            <div className="wrapper">
+                <div className="menu">
+                    <div className="menu__links">
+                        <ul className="menu__links__list">
+                            {this.URLS.map(link => <Link to={link.url}>{link.label}</Link>)}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
