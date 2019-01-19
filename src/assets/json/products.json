@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1",
+        "position": "0",
+        "title": "Supid",
+        "products": [
+            {
+                "id": 1,
+                "title": "Miso Supp (150 ml)",
+                "description": "Miso pastа, nori, sesame seeds, fresh dill.",
+                "price": 3.5,
+                "cover": "https://sushipanda.ee/523-home_default/miso-supp-150-ml.jpg"
+            },
+            {
+                "id": 2,
+                "title": "Lõhe supp (150 ml)",
+                "description": "Miso pasta, vetikad, lõhe, seesamiseemned, värske till.",
+                "price": 4.5,
+                "cover": "https://sushipanda.ee/524-home_default/lohe-supp-150-ml.jpg"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "position": "1",
+        "title": "Salatid",
+        "products": [
+            {
+                "id": 3,
+                "title": "Wakame pähklikastmega (100 g)",
+                "description": "Goma-wakame vetikad, seesamiseemned, pähklikaste",
+                "price": 3.5,
+                "cover": "https://sushipanda.ee/442-home_default/wakame-pahklikastmega-100-g.jpg"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "position": "2",
+        "title": "Nigiri",
+        "products": [
+            {
+                "id": 4,
+                "title": "Lõhe nigiri",
+                "description": "Lõhe, riis",
+                "price": 2.0,
+                "cover": "https://sushipanda.ee/332-home_default/lohe-nigiri.jpg"
+            }
+        ]
+    }
+]
