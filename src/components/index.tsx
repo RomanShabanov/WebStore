@@ -9,6 +9,8 @@ import Sidemenu from './Sidemenu';
 import Calendar from './Calendar';
 import LanguageSwitch from './LanguageSwitch';
 import ToTop from './ToTop';
+import Link from './Link';
+import LazyImage from './LazyImage';
 
 export {
     Button,
@@ -22,4 +24,6 @@ export {
     Calendar,
     LanguageSwitch,
     ToTop,
+    LazyImage,
+    Link,
 }
