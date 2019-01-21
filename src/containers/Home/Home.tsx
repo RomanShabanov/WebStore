@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './Home.scss';
 
+import { observer, inject } from "mobx-react";
+
 import { ProductPreview, LazyImage } from '../../components';
 
 import imageHomeHero from '../../assets/images/Test_slide.png';
-import ProductsJSON from '../../assets/json/products.json';
 
-class Home extends Component {
+@inject('products')
+@observer
+class Home extends Component<any, any> {
+    constructor(props: any) {
+        super(props);
+    }
+
     render() {
+
         return <div className="Home">
 
             <div className="Home__Hero">
@@ -19,11 +27,12 @@ class Home extends Component {
             <div className="Home__Sale">
                 <div className="wrapper">
                     <section>
-                        {ProductsJSON.map(category => {
+                        {!this.props.products.list.length && <div>Loading...</div>}
+                        {this.props.products.list.map((category: any) => {
                             return (<div className="Menu__Category" key={category.id}>
                                 <h2 className="title">{category.title}</h2>
                                 <div className="products">
-                                    {category.products.map(product => {
+                                    {category.products.map((product: any) => {
                                         return <ProductPreview key={product.id} product={product} />
                                     })}
                                 </div>

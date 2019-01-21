@@ -1,11 +1,7 @@
-import Products from './products.store';
+import ProductsStore from './products.store';
+import PostsStore from './posts.store';
 
-class Store {
-    products: any;
-
-    constructor() {
-        this.products = new Products(this);
-    }
+export {
+    ProductsStore,
+    PostsStore,
 }
-
-export default Store;

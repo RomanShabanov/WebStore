@@ -1,31 +1,20 @@
-import { decorate, observable, flow } from "mobx";
+import { observable } from "mobx";
 
-class Products {
+import ProductsJSON from '../assets/json/products.json';
 
-    @observable products = [];
-    @observable categories: {
-        title: string,
-        slug: string,
-    }[] = [];
+class ProductsStore {
 
-    store: any;
+    @observable list: any = [];
 
-    constructor(store: any) {
-        this.store = store;
+    constructor() {
         this.loadProducts();
     }
 
     loadProducts() {
-        [{
-            title: 'Nigiri',
-            slug: "nigiri",
-        }, {
-            title: 'Alcohol',
-            slug: 'alcohol',
-        }].map(category => {
-            this.categories.push(category);
-        });
+        setTimeout(() => {
+            this.list = ProductsJSON;
+        }, 5000);
     }
 }
 
-export default Products;
+export default ProductsStore;

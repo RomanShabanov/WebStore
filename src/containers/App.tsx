@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+import { Provider } from "mobx-react"
+
 import Loadable from 'react-loadable';
 
 import { Header, Footer } from '../components';
 
-import Store from '../stores';
+import { ProductsStore, PostsStore } from '../stores';
+const productsStore = new ProductsStore();
+const postsStore = new PostsStore();
 
 const AsyncHome = Loadable({
   loader: () => import(/* webpackChunkName: "Home" */ './Home'),
@@ -92,36 +96,39 @@ const AsyncPost = Loadable({
   loading: () => <div>Loading...</div>
 });
 
-class App extends Component {
+
+class App extends Component<any, any> {
   render() {
     return (
-      <BrowserRouter>
-        <div className="App">
-          <Header />
-          <div className="Content">
-            <Switch>
-              <Route path='/' exact component={AsyncHome} />
-              <Route path='/booking' exact component={AsyncBooking} />
-              <Route path='/contacts' exact component={AsyncContacts} />
-              <Route path='/checkout' component={AsyncCheckout} />
-              <Route path='/forgot' component={AsyncForgot} />
-              <Route path='/instagramwall' component={AsyncInstagramWall} />
-              <Route path='/login' component={AsyncLogin} />
-              <Route path='/offers' component={AsyncOffers} />
-              <Route path='/order' component={AsyncOrder} />
-              <Route path='/ordershistory' component={AsyncOrdersHistory} />
-              <Route path='/profile' component={AsyncProfile} />
-              <Route path='/signup' component={AsyncSignUp} />
-              <Route path='/about' component={AsyncAbout} />
-              <Route path='/vegan' component={AsyncVegan} />
-              <Route path='/menu' component={AsyncMenu} />
-              <Route exact path='/blog' component={AsyncBlog} />
-              <Route exact path='/blog/:slug' component={AsyncPost} />
-            </Switch>
+      <Provider products={productsStore} posts={postsStore}>
+        <BrowserRouter>
+          <div className="App">
+            <Header />
+            <div className="Content">
+              <Switch>
+                <Route path='/' exact component={AsyncHome} />
+                <Route path='/booking' exact component={AsyncBooking} />
+                <Route path='/contacts' exact component={AsyncContacts} />
+                <Route path='/checkout' component={AsyncCheckout} />
+                <Route path='/forgot' component={AsyncForgot} />
+                <Route path='/instagramwall' component={AsyncInstagramWall} />
+                <Route path='/login' component={AsyncLogin} />
+                <Route path='/offers' component={AsyncOffers} />
+                <Route path='/order' component={AsyncOrder} />
+                <Route path='/ordershistory' component={AsyncOrdersHistory} />
+                <Route path='/profile' component={AsyncProfile} />
+                <Route path='/signup' component={AsyncSignUp} />
+                <Route path='/about' component={AsyncAbout} />
+                <Route path='/vegan' component={AsyncVegan} />
+                <Route path='/menu' component={AsyncMenu} />
+                <Route exact path='/blog' component={AsyncBlog} />
+                <Route exact path='/blog/:slug' component={AsyncPost} />
+              </Switch>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
