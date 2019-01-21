@@ -1,7 +1,7 @@
 [
     {
-        "id": "1",
-        "position": "0",
+        "id": 1,
+        "position": 0,
         "title": "Supid",
         "products": [
             {
@@ -21,8 +21,8 @@
         ]
     },
     {
-        "id": "2",
-        "position": "1",
+        "id": 2,
+        "position": 1,
         "title": "Salatid",
         "products": [
             {
@@ -35,8 +35,8 @@
         ]
     },
     {
-        "id": "3",
-        "position": "2",
+        "id": 3,
+        "position": 2,
         "title": "Nigiri",
         "products": [
             {

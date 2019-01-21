@@ -8,7 +8,6 @@ import ProductsJSON from '../../assets/json/products.json';
 
 class Home extends Component {
     render() {
-        console.log(ProductsJSON);
         return <div className="Home">
 
             <div className="Home__Hero">
@@ -21,7 +20,7 @@ class Home extends Component {
                 <div className="wrapper">
                     <section>
                         {ProductsJSON.map(category => {
-                            return (<div className="Menu__Category">
+                            return (<div className="Menu__Category" key={category.id}>
                                 <h2 className="title">{category.title}</h2>
                                 <div className="products">
                                     {category.products.map(product => {

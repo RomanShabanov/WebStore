@@ -1,8 +1,22 @@
-[{
-    "id": 0,
-    "title": "Что пить, когда ешь суши?",
-    "description": "Mollit non exercitation est duis amet amet culpa est. Ut reprehenderit enim ea excepteur consequat est aute. Id aute commodo eiusmod duis laborum duis.",
-    "text": "Nulla ipsum veniam enim elit ut consequat excepteur anim. Elit magna dolore esse ipsum id irure cupidatat reprehenderit. Minim dolore sint in eiusmod nostrud cillum. Ipsum et ipsum sit et cupidatat esse. Sunt commodo eu duis in irure dolore sint duis laboris eiusmod ipsum ut.",
-    "cover": "",
-    "date": 1547910319111
-}]
+[
+    {
+        "id": 0,
+        "title": "Что пить, когда ешь суши?",
+        "slug": "shto-pitj-kogda-esh-sushi",
+        "language": "ru",
+        "description": "Mollit non exercitation est duis amet amet culpa est. Ut reprehenderit enim ea excepteur consequat est aute. Id aute commodo eiusmod duis laborum duis.",
+        "text": "Nulla ipsum veniam enim elit ut consequat excepteur anim. Elit magna dolore esse ipsum id irure cupidatat reprehenderit. Minim dolore sint in eiusmod nostrud cillum. Ipsum et ipsum sit et cupidatat esse. Sunt commodo eu duis in irure dolore sint duis laboris eiusmod ipsum ut.",
+        "cover": "https://52f073a67e89885d8c20-b113946b17b55222ad1df26d6703a42e.ssl.cf2.rackcdn.com/_800x1000_fit_center-center/rasushi_cocktails.jpg",
+        "timestamp": 1547910319111
+    },
+    {
+        "id": 1,
+        "title": "Какие суши попробовать в первый раз?",
+        "slug": "kakie-sushi-poprobovatj-v-pervij-raz",
+        "language": "ru",
+        "description": "Mollit non exercitation est duis amet amet culpa est. Ut reprehenderit enim ea excepteur consequat est aute. Id aute commodo eiusmod duis laborum duis.",
+        "text": "Nulla ipsum veniam enim elit ut consequat excepteur anim. Elit magna dolore esse ipsum id irure cupidatat reprehenderit. Minim dolore sint in eiusmod nostrud cillum. Ipsum et ipsum sit et cupidatat esse. Sunt commodo eu duis in irure dolore sint duis laboris eiusmod ipsum ut.",
+        "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRidEWYaYIye8iFpD7IrVLRtTVMxCYci_s2LqF7iVZHONH54V5-",
+        "timestamp": 1548093047650
+    }
+]
