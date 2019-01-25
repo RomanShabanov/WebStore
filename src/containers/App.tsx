@@ -7,10 +7,7 @@ import Loadable from 'react-loadable';
 
 import { Header, Footer } from '../components';
 
-import { ProductsStore, PostsStore, BasketStore } from '../stores';
-const productsStore = new ProductsStore();
-const postsStore = new PostsStore();
-const basketStore = new BasketStore();
+import * as stores from '../stores';
 
 const AsyncHome = Loadable({
   loader: () => import(/* webpackChunkName: "Home" */ './Home'),
@@ -101,7 +98,7 @@ const AsyncPost = Loadable({
 class App extends Component<any, any> {
   render() {
     return (
-      <Provider products={productsStore} posts={postsStore} basket={basketStore}>
+      <Provider {...stores}>
         <BrowserRouter>
           <div className="App">
             <Header />

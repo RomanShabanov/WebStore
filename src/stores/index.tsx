@@ -1,9 +1,11 @@
-import ProductsStore from './products.store';
-import PostsStore from './posts.store';
-import BasketStore from './basket.store';
+import products from './products.store';
+import posts from './posts.store';
+import basket from './basket.store';
+import auth from './auth.store';
 
 export {
-    ProductsStore,
-    PostsStore,
-    BasketStore,
+    products,
+    posts,
+    basket,
+    auth,
 }

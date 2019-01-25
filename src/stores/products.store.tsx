@@ -15,4 +15,6 @@ class ProductsStore {
     }
 }
 
-export default ProductsStore;
+const products = new ProductsStore();
+
+export default products;
