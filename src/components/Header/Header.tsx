@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import { observer, inject } from "mobx-react";
+
 import './Header.scss';
 
-class Header extends Component {
+@inject('basket')
+@observer
+class Header extends Component<any, any> {
     private URLS = [
         {
             label: "Home",
@@ -27,6 +31,7 @@ class Header extends Component {
     ]
 
     render() {
+
         return <header className="Header">
             <div className="wrapper">
                 <div className="menu">
@@ -34,6 +39,7 @@ class Header extends Component {
                         {this.URLS.map(link => <Link className="link" key={link.label} to={link.url}>{link.label}</Link>)}
                     </div>
                 </div>
+                <div className="Basket">{this.props.basket.cart.total}</div>
             </div>
         </header>
     }

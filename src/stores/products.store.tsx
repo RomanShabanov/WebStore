@@ -11,9 +11,7 @@ class ProductsStore {
     }
 
     loadProducts() {
-        setTimeout(() => {
-            this.list = ProductsJSON;
-        }, 5000);
+        this.list = ProductsJSON;
     }
 }
 

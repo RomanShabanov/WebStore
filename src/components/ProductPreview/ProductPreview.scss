@@ -1,13 +1,20 @@
+@import "../../styles/mixins";
+
 .ProductPreview {
     display: block;
     width: 25%;
     height: 300px;
+    position: relative;
 
-    .cover{
+    .cover {
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
+    }
+
+    .flag {
+        @include pseudo;
     }
 }
