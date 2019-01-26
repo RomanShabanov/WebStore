@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Home.scss';
 
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 import { ProductPreview, LazyImage } from '../../components';
 
 import imageHomeHero from '../../assets/images/Test_slide.png';
 
-@observer(['products'])
+@inject('products')
+@observer
 class Home extends Component<any, any> {
     constructor(props: any) {
         super(props);

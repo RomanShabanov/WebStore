@@ -4,11 +4,12 @@ import { IPost } from '../../interfaces';
 
 import { PostPreview } from '../../components';
 
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 import './Blog.scss';
 
-@observer(['posts'])
+@inject('posts')
+@observer
 class Blog extends Component<any, any> {
     render() {
         return <div className="Blog">

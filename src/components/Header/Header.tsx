@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 import './Header.scss';
 
-@observer(['basket', 'auth'])
+@inject('basket', 'auth')
+@observer
 class Header extends Component<any, any> {
 
     private URLS = [
@@ -32,6 +33,11 @@ class Header extends Component<any, any> {
 
     constructor(props: any) {
         super(props);
+        this.logout = this.logout.bind(this);
+    }
+
+    logout() {
+        this.props.auth.logout();
     }
 
     render() {
@@ -46,7 +52,9 @@ class Header extends Component<any, any> {
                 <div className="Basket">Items in the basket: {this.props.basket.cart.total}</div>
                 <div className="Header__Account">
                     {!this.props.auth.isLoggedIn && <Link to={`/login`}>Login</Link>}
-                    <p>User: {this.props.auth.isLoggedIn ? 'online' : 'offline'}</p>
+                    <p>User: {this.props.auth.user && <strong>{this.props.auth.user.email}</strong>} {this.props.auth.user ? 'online' : 'offline'}</p>
+
+                    {this.props.auth.user && <button onClick={this.logout}>Logout</button>}
                 </div>
             </div>
         </header>

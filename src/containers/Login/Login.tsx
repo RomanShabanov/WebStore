@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
 import { Redirect } from 'react-router-dom';
 
 import './Login.scss';
 
-@observer(['auth'])
+@inject('auth')
+@observer
 class Login extends Component<any, any>{
     constructor(props: any) {
         super(props);
@@ -16,7 +17,7 @@ class Login extends Component<any, any>{
 
     login(e: any) {
         e.preventDefault();
-        this.props.auth.login();
+        this.props.auth.login('bit.size.dev@gmail.com', 'RandomPassword');
     }
 
     render() {
