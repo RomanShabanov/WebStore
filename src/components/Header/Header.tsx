@@ -45,8 +45,8 @@ class Header extends Component<any, any> {
                 </div>
                 <div className="Basket">Items in the basket: {this.props.basket.cart.total}</div>
                 <div className="Header__Account">
-                <Link to={`/login`}>Login</Link>
-                    <p>User: {this.props.auth.isLoggedIn ? 'online' : 'offline' }</p>
+                    {!this.props.auth.isLoggedIn && <Link to={`/login`}>Login</Link>}
+                    <p>User: {this.props.auth.isLoggedIn ? 'online' : 'offline'}</p>
                 </div>
             </div>
         </header>

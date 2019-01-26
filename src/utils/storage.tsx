@@ -15,10 +15,13 @@ class StorageService {
     }
 
     public get(key: string) {
+
+        const value = this.storage.getItem(`${this.namespace}${key}`);
+
         try {
-            return JSON.parse(this.storage.getItem(`${this.namespace}${key}`));
+            return JSON.parse(value);
         } catch (err) {
-            return this.storage.getItem(`${this.namespace}${key}`);
+            return value || null;
         }
     }
 
@@ -27,7 +30,8 @@ class StorageService {
     }
 
     public clear() {
-        this.storage.clear();
+        /** TODO: Remove only namespaced keys */
+        // this.storage.clear();
     }
 }
 

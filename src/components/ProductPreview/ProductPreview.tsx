@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-import { observer, inject } from "mobx-react";
+import { observer } from "mobx-react";
 
 import './ProductPreview.scss';
 
 import { IProduct } from '../../interfaces';
 
-@inject('basket')
-@observer
+@observer(['basket'])
 class ProductPreview extends Component<any, any> {
     constructor(props: IProduct) {
         super(props);
