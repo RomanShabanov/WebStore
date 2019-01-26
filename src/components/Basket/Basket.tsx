@@ -43,8 +43,9 @@ class Basket extends Component<any, any> {
             <span onClick={this.showBasket}>Basket: {this.props.basket.cart.total}</span>
             {this.state.basketVisible && <div className="Basket__Sidemenu">
                 <div><span onClick={this.hideBasket}>Close</span></div>
-                <div>
-
+                <div>{/** TODO: Loop cart's items
+                    Name - QTY - Total Price
+                */}
                 </div>
                 <div><span onClick={this.clearBasket}>Clear</span></div>
             </div>}
