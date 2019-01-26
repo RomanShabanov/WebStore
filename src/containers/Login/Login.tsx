@@ -4,6 +4,8 @@ import { observer, inject } from "mobx-react";
 
 import { Redirect } from 'react-router-dom';
 
+import { validateEmail } from "../../utils";
+
 import './Login.scss';
 
 @inject('auth')
@@ -13,17 +15,52 @@ class Login extends Component<any, any>{
         super(props);
 
         this.login = this.login.bind(this);
+        this.inputChange = this.inputChange.bind(this);
+
+        this.state = {
+            email: '',
+            password: '',
+            error: null,
+        }
     }
 
     login(e: any) {
         e.preventDefault();
-        this.props.auth.login('bit.size.dev@gmail.com', 'RandomPassword');
+
+        if (!this.state.email) {
+            this.setState({
+                error: "E-mail is required.",
+            });
+            return false;
+        }
+
+        if (!validateEmail(this.state.email)) {
+            this.setState({
+                error: "E-mail is incorrect.",
+            });
+            return false;
+        }
+
+        if (!this.state.password) {
+            this.setState({
+                error: "Password is required.",
+            });
+            return false;
+        }
+
+        this.props.auth.login(this.state.email, this.state.password);
+    }
+
+    inputChange(e: any) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
     }
 
     render() {
 
-        if(this.props.auth.isLoggedIn){
-            return <Redirect to={`/`}/>
+        if (this.props.auth.isLoggedIn) {
+            return <Redirect to={`/`} />
         }
 
         return <div className="Login">
@@ -31,14 +68,15 @@ class Login extends Component<any, any>{
                 <form onSubmit={this.login}>
                     <label>
                         <span>Email</span>
-                        <input name="email" type="text" />
+                        <input value={this.state.email} onChange={this.inputChange} name="email" type="text" />
                     </label>
                     <label>
                         <span>Password</span>
-                        <input name="password" type="password" />
+                        <input value={this.state.password} onChange={this.inputChange} name="password" type="password" />
                     </label>
                     <button type="submit">Login</button>
                 </form>
+                {this.state.error && <p>{this.state.error}</p>}
             </div>
         </div>
     }

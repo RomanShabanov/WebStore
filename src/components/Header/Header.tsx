@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import './Header.scss';
+
 import { Link } from 'react-router-dom';
 
-import { observer, inject } from "mobx-react";
+import { Basket } from '../../components';
 
-import './Header.scss';
+import { observer, inject } from "mobx-react";
 
 @inject('basket', 'auth')
 @observer
@@ -49,7 +51,9 @@ class Header extends Component<any, any> {
                         {this.URLS.map(link => <Link className="link" key={link.label} to={link.url}>{link.label}</Link>)}
                     </div>
                 </div>
-                <div className="Basket">Items in the basket: {this.props.basket.cart.total}</div>
+
+                <Basket/>
+
                 <div className="Header__Account">
                     {!this.props.auth.isLoggedIn && <Link to={`/login`}>Login</Link>}
                     <p>User: {this.props.auth.user && <strong>{this.props.auth.user.email}</strong>} {this.props.auth.user ? 'online' : 'offline'}</p>

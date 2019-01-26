@@ -1,0 +1,13 @@
+.Basket {
+    &__Sidemenu {
+        position: fixed;
+        right: 0;
+        top: 0;
+        background: #000;
+        max-width: 400px;
+        width: 100%;
+        z-index: 1000;
+        height: 100%;
+        padding: 20px;
+    }
+}

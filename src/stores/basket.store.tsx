@@ -7,7 +7,7 @@ import { storage } from '../utils';
 class BasketStore {
 
     @observable cart: any = {
-        items: {},
+        items: [],
         total: 0,
     };
 
@@ -21,11 +21,14 @@ class BasketStore {
     }
 
     add(product: IProduct) {
-        if (!this.cart.items[product.id]) {
+
+        const item = this.cart.items.find((item: any) => item.id === product.id);
+
+        if (!item) {
             product.qty = 1;
-            this.cart.items[product.id] = product;
+            this.cart.items.push(product);
         } else {
-            this.cart.items[product.id].qty += 1;
+            item.qty += 1;
         }
 
         this.cart.total += 1;
@@ -34,16 +37,18 @@ class BasketStore {
 
     remove(product: IProduct) {
 
-        if (this.cart.items[product.id]) {
-            this.cart.total -= 1;
-            this.cart.items[product.id].qty -= 1;
+        const item = this.cart.items.find((item: any) => item.id === product.id);
 
-            if (this.cart.items[product.id].qty === 0) {
-                delete this.cart.items[product.id];
+        if (item) {
+            this.cart.total -= 1;
+
+            if (item.qty <= 1) {
+                this.cart.items.splice(this.cart.items.indexOf(item), 1);
+            } else {
+                item.qty -= 1;
             }
         }
         this.syncWithStorage();
-
     }
 
     clear() {
