@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import { observer, inject } from "mobx-react";
+import { observer } from "mobx-react";
 
 import './Header.scss';
 
@@ -32,17 +32,6 @@ class Header extends Component<any, any> {
 
     constructor(props: any) {
         super(props);
-
-        this.login = this.login.bind(this);
-        this.logout = this.logout.bind(this);
-    }
-
-    login() {
-        this.props.auth.login();
-    }
-
-    logout() {
-        this.props.auth.logout();
     }
 
     render() {
@@ -56,9 +45,8 @@ class Header extends Component<any, any> {
                 </div>
                 <div className="Basket">Items in the basket: {this.props.basket.cart.total}</div>
                 <div className="Header__Account">
+                <Link to={`/login`}>Login</Link>
                     <p>User: {this.props.auth.isLoggedIn ? 'online' : 'offline' }</p>
-                    <button onClick={this.login}>Login</button>
-                    <button onClick={this.logout}>Logout</button>
                 </div>
             </div>
         </header>

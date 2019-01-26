@@ -4,7 +4,7 @@ import { storage } from '../utils';
 
 class AuthStore {
 
-    @observable isLoggedIn: boolean = true;
+    @observable isLoggedIn: boolean = false;
 
     constructor() {
 
