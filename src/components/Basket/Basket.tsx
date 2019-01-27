@@ -45,7 +45,20 @@ class Basket extends Component<any, any> {
                 <div><span onClick={this.hideBasket}>Close</span></div>
                 <div>{/** TODO: Loop cart's items
                     Name - QTY - Total Price
-                */}
+                */
+                    this.props.basket.cart.items.map((item: any) => {
+                        return
+                        <span>{item.title}</span>;
+                        <span>{item.qty}</span>;
+                        <span>{item.qty * item.price}</span>
+
+                    })
+
+
+
+
+
+                }
                 </div>
                 <div><span onClick={this.clearBasket}>Clear</span></div>
             </div>}
